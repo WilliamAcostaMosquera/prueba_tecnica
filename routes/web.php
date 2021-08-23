@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('page_one');
+    return view('prueba.vehiculo');
 });
+
+Route::resource('/', 'App\Http\Controllers\vehiculocontroler');
+
+
