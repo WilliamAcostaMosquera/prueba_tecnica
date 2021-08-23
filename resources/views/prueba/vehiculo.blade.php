@@ -1,7 +1,7 @@
 @extends('layouts.plantilla_base')
 
 @section('contenido')
-    <a href="prueba/create_vehiculo" class="btn btn-success">Crear vehiculo</a>
+    <a href="/create" class="btn btn-success">Crear vehiculo</a>
 
     <table class="table table-dark table-striped mt-4">
         <thead>
