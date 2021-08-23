@@ -25,7 +25,7 @@ class vehiculocontroler extends Controller
      */
     public function create()
     {
-        //
+        return view('prueba.create_vehiculo');
     }
 
     /**
