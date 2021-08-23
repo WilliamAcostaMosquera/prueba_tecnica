@@ -15,7 +15,19 @@
             </tr>
         </thead>
         <tbody>
-
+            @foreach($vehiculo as $vehiculos)
+                <tr>
+                    <td>{{$vehiculo->placa}}}</td>
+                    <td>{{$vehiculo->marca}}}</td>
+                    <td>{{$vehiculo->color}}}</td>
+                    <td>{{$vehiculo->tdv}}}</td>
+                    <td>{{$vehiculo->conductor}}}</td>
+                    <td>{{$vehiculo->propietario}}}</td>
+                    <td>
+                        <a class="btn btn-info btn-success"> editar </a>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
 
     </table>
