@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Propietario;
 use Illuminate\Http\Request;
 
 class PropietarioController extends Controller
@@ -23,7 +24,8 @@ class PropietarioController extends Controller
      */
     public function create()
     {
-        return view('prueba.create_propietario');
+        $propietarios = Propietario::all();
+        return view('prueba.create_propietario')->with('propietarios', $propietarios);
     }
 
     /**
@@ -34,7 +36,20 @@ class PropietarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $propietarios = new Propietario();
+
+        $propietarios -> documento = $request->get('documento');
+        $propietarios -> p_nombre = $request->get('p_nombre');
+        $propietarios -> s_nombre = $request->get('s_nombre');
+        $propietarios -> apellidos = $request->get('apellidos');
+        $propietarios -> direccion = $request->get('direccion');
+        $propietarios -> telefono = $request->get('telefono');
+        $propietarios -> ciudad = $request->get('ciudad');
+
+        $propietarios -> save();
+
+        $propietarios = Propietario::all();
+        return view('prueba.create_conductor')->with('conductor', $propietarios);
     }
 
     /**
