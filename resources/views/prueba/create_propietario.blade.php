@@ -55,9 +55,7 @@
                 <td>{{$propietario->apellidos}}</td>
                 <td>{{$propietario->direccion}}</td>
                 <td>{{$propietario->telefono}}</td>
-                <td>
-                    <input readonly="1" @default>
-                    {{$propietario->ciudad}}</td>
+                <td>{{$propietario->ciudad}}</td>
             </tr>
         @endforeach
         </tbody>
