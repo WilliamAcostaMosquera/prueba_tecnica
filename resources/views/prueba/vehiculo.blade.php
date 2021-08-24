@@ -3,7 +3,7 @@
 @section('contenido')
     <div class="row ">
         <div class="col-4  ">
-            <a href="/create" class="btn btn-success ">CREAR VEHICULO</a>
+            <a href="Vehiculo/create" class="btn btn-success ">CREAR VEHICULO</a>
         </div>
         <div class="col-4">
             <a href="Conductor/create" class="btn btn-success ">CREAR CONDUCTOR</a>
@@ -28,14 +28,10 @@
                 <tr>
                     <td>{{$vehiculos->placa}}</td>
                     <td>{{$vehiculos->marca}}</td>
-                    <td>{{$vehiculos->conductor}}</td>
-                    <td>{{$vehiculos->propietario}}</td>
-                    <td>
-                        <a class="btn btn-info btn-success"> editar </a>
-                    </td>
+                    <td>{{$vehiculos->conductors_id}}</td>
+                    <td>{{$vehiculos->propietario_id}}</td>
                 </tr>
             @endforeach
         </tbody>
-
     </table>
 @endsection

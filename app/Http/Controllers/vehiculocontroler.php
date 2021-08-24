@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Conductor;
+use App\Models\Propietario;
 use Illuminate\Http\Request;
 use App\Models\vehiculo;
+use App\Http\PropietarioController;
+use App\Http\ConductorController;
 
 class vehiculocontroler extends Controller
 {
@@ -15,7 +19,7 @@ class vehiculocontroler extends Controller
     public function index()
     {
         $vehiculo = vehiculo::all();
-        return view('prueba.vehiculo') ->with('vehiculo', $vehiculo);
+        return view('prueba.vehiculo') ->with('vehiculo',$vehiculo);
     }
 
     /**

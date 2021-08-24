@@ -56,9 +56,6 @@
                 <td>{{$conductores->direccion}}</td>
                 <td>{{$conductores->telefono}}</td>
                 <td>{{$conductores->ciudad}}</td>
-                <td>
-                    <a class="btn btn-info btn-success"> editar </a>
-                </td>
             </tr>
         @endforeach
         </tbody>

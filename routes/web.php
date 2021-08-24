@@ -20,5 +20,6 @@ Route::get('/', function () {
 Route::resource('/', 'App\Http\Controllers\vehiculocontroler');
 Route::resource('Propietario', 'App\Http\Controllers\PropietarioController');
 Route::resource('Conductor', 'App\Http\Controllers\ConductorController');
+Route::resource('Vehiculo', 'App\Http\Controllers\vehiculo_create');
 
 
