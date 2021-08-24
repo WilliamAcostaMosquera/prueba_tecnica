@@ -15,8 +15,6 @@ class CreateConductorsTable extends Migration
     {
         Schema::create('conductors', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('veiculo_id');
-            $table->foreign('veiculo_id')->references('id')->on('vehiculos');
             $table->char('documento',12);
             $table->string('p_nombre',7);
             $table->string('s_nombre',7);

@@ -1,7 +1,18 @@
 @extends('layouts.plantilla_base')
 
 @section('contenido')
-    <a href="/create" class="btn btn-success">Crear vehiculo</a>
+    <div class="row ">
+        <div class="col-4  ">
+            <a href="/create" class="btn btn-success ">CREAR VEHICULO</a>
+        </div>
+        <div class="col-4">
+            <a href="Conductor/create" class="btn btn-success ">CREAR CONDUCTOR</a>
+        </div>
+        <div class="col-4">
+            <a href="Propietario/create" class="btn btn-success ">CREAR PROPIETARIO</a>
+        </div>
+    </div>
+
 
     <table class="table table-dark table-striped mt-4">
         <thead>

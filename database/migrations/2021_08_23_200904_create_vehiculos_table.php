@@ -19,6 +19,10 @@ class CreateVehiculosTable extends Migration
             $table->string('marca', 10);
             $table->string('color', 10);
             $table->string('tdv', 10);
+            $table->unsignedBigInteger('propietario_id');
+            $table->foreign('propietario_id')->references('id')->on('propietarios');
+            $table->unsignedBigInteger('conductors_id');
+            $table->foreign('conductors_id')->references('id')->on('conductors');
             $table->timestamps();
         });
     }

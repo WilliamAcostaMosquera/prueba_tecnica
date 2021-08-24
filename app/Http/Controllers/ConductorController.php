@@ -23,7 +23,7 @@ class ConductorController extends Controller
      */
     public function create()
     {
-        //
+        return view('prueba.create_conductor');
     }
 
     /**
