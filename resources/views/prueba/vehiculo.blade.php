@@ -7,9 +7,7 @@
         <thead>
             <tr>
                 <th scope="col">Placa</th>
-                <th scope="col">Color</th>
                 <th scope="col">Marca</th>
-                <th scope="col">Tipo de vehículo</th>
                 <th scope="col">Conductor</th>
                 <th scope="col">Propietario</th>
             </tr>
@@ -19,8 +17,6 @@
                 <tr>
                     <td>{{$vehiculo->placa}}}</td>
                     <td>{{$vehiculo->marca}}}</td>
-                    <td>{{$vehiculo->color}}}</td>
-                    <td>{{$vehiculo->tdv}}}</td>
                     <td>{{$vehiculo->conductor}}}</td>
                     <td>{{$vehiculo->propietario}}}</td>
                     <td>
