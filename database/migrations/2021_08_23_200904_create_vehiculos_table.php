@@ -15,10 +15,10 @@ class CreateVehiculosTable extends Migration
     {
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->id();
-            $table->string('placa', 7);
-            $table->string('marca', 10);
-            $table->string('color', 10);
-            $table->string('tdv', 10);
+            $table->string('placa', 10);
+            $table->string('marca', 14);
+            $table->string('color', 20);
+            $table->string('tdv', );
             $table->unsignedBigInteger('propietario_id');
             $table->foreign('propietario_id')->references('id')->on('propietarios');
             $table->unsignedBigInteger('conductors_id');
