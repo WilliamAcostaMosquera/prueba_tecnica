@@ -26,10 +26,10 @@
         <tbody>
             @foreach($vehiculo as $vehiculos)
                 <tr>
-                    <td>{{$vehiculo->placa}}}</td>
-                    <td>{{$vehiculo->marca}}}</td>
-                    <td>{{$vehiculo->conductor}}}</td>
-                    <td>{{$vehiculo->propietario}}}</td>
+                    <td>{{$vehiculos->placa}}</td>
+                    <td>{{$vehiculos->marca}}</td>
+                    <td>{{$vehiculos->conductor}}</td>
+                    <td>{{$vehiculos->propietario}}</td>
                     <td>
                         <a class="btn btn-info btn-success"> editar </a>
                     </td>

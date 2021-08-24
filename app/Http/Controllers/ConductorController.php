@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Conductor;
 use Illuminate\Http\Request;
 
 class ConductorController extends Controller
@@ -23,7 +24,8 @@ class ConductorController extends Controller
      */
     public function create()
     {
-        return view('prueba.create_conductor');
+        $conductor = Conductor::all();
+        return view('prueba.create_conductor')->with('conductor', $conductor);
     }
 
     /**
@@ -34,7 +36,20 @@ class ConductorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $conductor = new Conductor();
+
+        $conductor -> documento = $request->get('documento');
+        $conductor -> p_nombre = $request->get('p_nombre');
+        $conductor -> s_nombre = $request->get('s_nombre');
+        $conductor -> apellidos = $request->get('apellidos');
+        $conductor -> direccion = $request->get('direccion');
+        $conductor -> telefono = $request->get('telefono');
+        $conductor -> ciudad = $request->get('ciudad');
+
+        $conductor -> save();
+
+        $conductor = Conductor::all();
+        return view('prueba.create_conductor')->with('conductor', $conductor);
     }
 
     /**

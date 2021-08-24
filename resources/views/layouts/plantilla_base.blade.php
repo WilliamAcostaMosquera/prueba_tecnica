@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <h1 class="bg-success text-white text-center">Registro de vehiculos</h1>
+    <a  style="text-decoration: none" href="/"><h1 class="bg-success text-white text-center " >Registro de vehiculos</h1></a>
 
     <div class="container">
         @yield('contenido')
